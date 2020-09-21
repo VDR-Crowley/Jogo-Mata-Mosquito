@@ -1,23 +1,18 @@
-/*
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-*/
+
+
 body {
-	/*background-position: top center ;*/
+	/*background-position: center;*/
 	background-image: url(../imagens/bg.jpg);
-	background-repeat: no-repeat;
-	/*background-size: 100%;*/
+	background-repeat: no-repeat center fixed;
+	background-size: cover;
 }
-/*
-.logo {
-	border:1px solid red;
-	width: 40%;
-	margin:auto;
-}
-*/
+
 .mosquito1 {
 	width: 50px;
 	height: 50px;
