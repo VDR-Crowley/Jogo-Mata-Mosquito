@@ -24,8 +24,24 @@
 
 			<div class="row">
 				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div class="mb-2">
+							<select class="form-control" id="iniciar">
+								<option value="">-- Selecione um nível --</option>
+								<option value="normal">Normal</option>
+								<option value="dificil">Difícil</option>
+								<option value="chucknorris">Chuck norris</option>
+							</select>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
 					<div class=" d-flex justify-content-center">
-						<button class="btn btn-danger btn-lg" onclick="voltaAoJogo()">Iniciar jogo</button>
+						<button class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar jogo</button>
 					</div>
 				</div>
 			</div>
@@ -34,8 +50,15 @@
 
 		<script>
 
-			function voltaAoJogo() {
-				window.location.href = 'jogo.html'
+			function iniciarJogo() {
+				var nivel = document.getElementById('iniciar').value
+				
+				if (nivel === '') {
+					alert('Selecione um nível para iniciar o jogo!')
+					return false
+				}
+				// recuperar o nivel como parametro
+				window.location.href = "jogo.html?" + nivel
 			}
 		</script>
 	</body>
