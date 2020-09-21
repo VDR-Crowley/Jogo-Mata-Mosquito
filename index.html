@@ -9,24 +9,23 @@
 </head>
 
 <body onresize="ajustaTamanhoPalcoJogo()">
-	<!--
-	<div class="logo">
-		<img src="imagens/game.png" width="500">
+
+	<div class="painel">
+		<div class="vidas">
+			<img id="vida1" src="imagens/coracao_cheio.png">
+			<img id="vida2" src="imagens/coracao_cheio.png">
+			<img id="vida3" src="imagens/coracao_cheio.png">
+		</div>
+		<div class="cronometro">Tempo Restante: <span id="cronometro"></span> </div>
 	</div>
 
-	<section>
-		<select name="">
-			<option value=""></option>
-			<option value=""></option>
-			<option value=""></option>
-		</select>
-
-		<button type="button">Iniciar Jogo</button>	
-	</section>
-	-->
-
 	<script>
-		posicaoRandomica()
+		document.getElementById('cronometro').innerHTML = tempo
+
+		var criaMosquito = setInterval(function() {
+		  posicaoRandomica()
+		}, 2000)
+		
 	</script>
 
 </body>

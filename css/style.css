@@ -4,14 +4,14 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
+*/
 body {
-	background-position: top center ;
+	/*background-position: top center ;*/
 	background-image: url(../imagens/bg.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	/*background-size: 100%;*/
 }
-
+/*
 .logo {
 	border:1px solid red;
 	width: 40%;
@@ -31,4 +31,33 @@ body {
 .mosquito3 {
 	width: 90px;
 	height: 90px;
+}
+
+.ladoA {
+	transform: scaleX(1);
+}
+
+.ladoB {
+	transform: scaleX(-1);
+}
+
+.painel {
+	position: absolute;
+	width: 190px;
+	padding:10px;
+	left:0px;
+	bottom:0px;
+	border-top:1px solid #fff;
+	background-color: #fff;
+	opacity: 0.7;
+}
+
+.vidas {
+	float:left;
+}
+
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
 }
