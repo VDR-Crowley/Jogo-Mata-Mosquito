@@ -3,6 +3,7 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
+var pontucaoComeca = 0
 
 var criaMosquitoTempo = 1500
 
@@ -10,13 +11,20 @@ var criaMosquitoTempo = 1500
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
-if(nivel === 'normal') {
+if(nivel === 'facil') {
+	tempo = 20
+	criaMosquitoTempo = 3000
+
+} else if(nivel === 'normal') {
+	tempo = 30
 	criaMosquitoTempo = 1500
 
-} else if(nivel === 'dificil') {
+}	else if(nivel === 'dificil') {
+	tempo = 40
 	criaMosquitoTempo = 1000
 
 } else if(nivel === 'chucknorris') {
+	tempo = 60
 	criaMosquitoTempo = 750
 
 }
@@ -48,6 +56,11 @@ var cronometro = setInterval(function() {
 }, 1000)
 
 
+// recorde
+var pontuacao = setInterval(function() {
+  document.getElementById('recordes').innerHTML = pontucaoComeca++
+}, 1000)
+
 
 function posicaoRandomica() {
 
@@ -69,7 +82,7 @@ function posicaoRandomica() {
 		}
 
 	}
-	
+
 	// Para não passar do tamanho da tela
 	var posicaoX = Math.floor(Math.random() * largura) - 90
 	var posicaoY = Math.floor(Math.random() * altura) - 90
@@ -111,6 +124,9 @@ function tamanhoAleatorio() {
 		
 		case 2:
 			return 'mosquito3'
+
+		case 3:
+			return 'mosquito4'
 
 	}
 
