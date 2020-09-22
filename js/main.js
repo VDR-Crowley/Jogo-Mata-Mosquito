@@ -13,7 +13,7 @@ nivel = nivel.replace('?', '')
 
 if(nivel === 'facil') {
 	tempo = 20
-	criaMosquitoTempo = 3000
+	criaMosquitoTempo = 2000
 
 } else if(nivel === 'normal') {
 	tempo = 30
