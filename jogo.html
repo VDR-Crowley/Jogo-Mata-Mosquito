@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mata Mosquito - Bem vindo</title>
 
-<head>
-	<meta charset="utf-8">
-	<title>Mata Mosquito - Bem vindo</title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/main.js"></script>
-</head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-<body onresize="ajustaTamanhoPalcoJogo()">
+		<link rel="stylesheet" href="css/style.css">
 
-	<div class="painel">
-		<div class="vidas">
-			<img id="vida1" src="imagens/coracao_cheio.png">
-			<img id="vida2" src="imagens/coracao_cheio.png">
-			<img id="vida3" src="imagens/coracao_cheio.png">
+		<script src="js/main.js"></script>
+	</head>
+
+	<body onresize="ajustaTamanhoPalcoJogo()">
+
+		<div class="painel">
+			<div class="vidas">
+				<img id="vida1" src="imagens/coracao_cheio.png">
+				<img id="vida2" src="imagens/coracao_cheio.png">
+				<img id="vida3" src="imagens/coracao_cheio.png">
+			</div>
+			<div class="cronometro">Tempo Restante: <span id="cronometro"></span> </div>
 		</div>
-		<div class="cronometro">Tempo Restante: <span id="cronometro"></span> </div>
-	</div>
 
-	<script>
-		document.getElementById('cronometro').innerHTML = tempo
+		<script>
+			document.getElementById('cronometro').innerHTML = tempo
 
-		var criaMosquito = setInterval(function() {
-		  posicaoRandomica()
-		}, criaMosquitoTempo)
-		
-	</script>
+			var criaMosquito = setInterval(function() { 
+				posicaoRandomica()
+			}, criaMosquitoTempo)
+			
+		</script>
 
-</body>
-
+	</body>
 </html>

@@ -1,8 +1,8 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Mata Mosquito - Gamer Over</title>
+		<title>Mata Mosquito - Vitoria</title>
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -14,6 +14,7 @@
 	<body>
 		
 		<div class="container">
+			
 			<div class="row">
 				<div class="col">
 					<div class=" d-flex justify-content-center">
@@ -25,8 +26,7 @@
 			<div class="row">
 				<div class="col">
 					<div class=" d-flex justify-content-center">
-						<button class="btn btn-dark btn-lg mr-2" onclick="reiniciarJogo()">Reiniciar</button>
-						<button class="btn btn-dark btn-lg" onclick="voltaAoJogo()">Menu Game</button>
+						<button class="btn btn-dark btn-lg" onclick="retorneMenu()">Menu Game</button>
 					</div>
 				</div>
 			</div>
@@ -34,13 +34,10 @@
 		</div>
 
 		<script>
-			function reiniciarJogo() {
-				window.location.href="jogo.html"
-			}
-
-			function voltaAoJogo() {
+			function retorneMenu() {
 				window.location.href = 'index.html'
-			}
+			} 
 		</script>
+
 	</body>
 </html>
