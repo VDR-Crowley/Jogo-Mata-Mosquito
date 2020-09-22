@@ -9,8 +9,11 @@
 
 #### Tecnologias usadas no projeto
 _JavaScript_
+
 _Boostratp 4_
+
 _Html_
+
 _Css_
 
 ## Imagens do jogo
