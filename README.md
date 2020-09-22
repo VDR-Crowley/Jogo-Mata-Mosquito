@@ -8,10 +8,13 @@
 > Melhorado por mim: Vando Dos Reis
 
 #### Tecnologias usadas no projeto
-_JavaScript_.
-_Boostratp 4_.
-_Html_.
-_Css_.
+>_JavaScript_
+>
+>_Boostratp 4_
+>
+>_Html_
+>
+>_Css_
 
 ## Imagens do jogo
 
