@@ -3,11 +3,14 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 15
-var pontucaoComeca = 0
+
+var combo = 50
+
+var pontuacao = 0
 
 var criaMosquitoTempo = 1500
 
-
+// Dificuldade do jogo
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
@@ -40,7 +43,7 @@ function ajustaTamanhoPalcoJogo() {
 ajustaTamanhoPalcoJogo()
 
 
-
+// O tempo do jogo
 var cronometro = setInterval(function() {
 
 	tempo -= 1
@@ -56,12 +59,7 @@ var cronometro = setInterval(function() {
 }, 1000)
 
 
-// recorde
-var pontuacao = setInterval(function() {
-  document.getElementById('recordes').innerHTML = pontucaoComeca++
-}, 1000)
-
-
+// Area do gameplay
 function posicaoRandomica() {
 
 	//remover o mosquito anterior (caso exista)
@@ -77,7 +75,6 @@ function posicaoRandomica() {
 			window.location.href = 'fim_de_jogo.html'
 		} else {
 			document.getElementById('vida' + vidas).src="imagens/coracao_vazio.png"
-		
 			vidas++
 		}
 
@@ -101,8 +98,17 @@ function posicaoRandomica() {
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
 	mosquito.id = 'mosquito'
+	
+	
 	mosquito.onclick = function() {
+		var tamanhoMosquito = document.getElementsByClassName('ladoA')
+		console.log(tamanhoMosquito)
 		this.remove()
+		document.getElementById('cronometro').innerHTML = tempo + 1
+		pontuacao += 10
+		localStorage.setItem('pontuacao', pontuacao)
+		document.getElementById('pontuacao').innerHTML = pontuacao
+
 	}
 
 
@@ -111,7 +117,7 @@ function posicaoRandomica() {
 }
 
 
-
+// Muda o tamanho do mosquito
 function tamanhoAleatorio() {
 	var classe = Math.floor(Math.random() * 3)
 
@@ -133,7 +139,7 @@ function tamanhoAleatorio() {
 }
 
 
-
+// Muda de lado a imagem do mosquito
 function ladoAleatorio() {
 	var classe = Math.floor(Math.random() * 2)
 

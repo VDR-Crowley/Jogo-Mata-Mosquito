@@ -29,14 +29,25 @@
 						<button class="btn btn-dark btn-lg" onclick="retorneMenu()">Menu Game</button>
 					</div>
 				</div>
+				<div class="col painel">
+					<h4 style="margin: 0 auto;">Parabéns</h4>
+					<strong>Pontuação: </strong><span id="pontuacao1"></span>
+				</div>
 			</div>
 
 		</div>
 
 		<script>
+		
 			function retorneMenu() {
 				window.location.href = 'index.html'
 			} 
+			
+			var pontos = localStorage.getItem('pontuacao')
+			
+			document.getElementById('pontuacao1').innerHTML = pontos
+			localStorage.clear()
+		
 		</script>
 
 	</body>

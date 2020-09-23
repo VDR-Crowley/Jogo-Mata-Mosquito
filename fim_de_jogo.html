@@ -30,10 +30,17 @@
 						</button>
 					</div>
 				</div>
+				<div class="col painel">
+						<strong>Pontuação: </strong><span id="pontuacao1"></span>
+				</div>
 			</div>
 
 		</div>
 
-
+		<script>
+			var pontos = localStorage.getItem('pontuacao')
+			document.getElementById('pontuacao1').innerHTML = pontos
+			localStorage.clear()
+		</script>
 	</body>
 </html>
