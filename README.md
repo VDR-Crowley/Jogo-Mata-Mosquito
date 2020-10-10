@@ -3,7 +3,7 @@
 #### Descrição do projeto
 > Esse Projeto foi desenvolvido no curso: _Desenvolvimento Web_
 >
-> Instrutor: _Jorge Sant Anna_
+> Instrutor: _Jorge Sant Ana_
 >
 > Melhorado por mim: Vando Dos Reis
 
